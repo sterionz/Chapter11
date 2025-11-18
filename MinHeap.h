@@ -106,3 +106,46 @@ out << obj.A[i] << " ";
 return out;
 }
 #endif // !MINHEAP_H
+
+// Union of two Min Heaps 
+MinHeap<int> unionMinHeap(MinHeap<int> h1, MinHeap<int> h2)
+{
+    MinHeap<int> result;
+
+    MinHeap<int> temp1 = h1;
+    while (!temp1.empty())
+    {
+        int val = temp1.front();
+        temp1.pop();
+        result.push(val);
+    }
+
+    MinHeap<int> temp2 = h2;
+    while (!temp2.empty())
+    {
+        int val = temp2.front();
+        temp2.pop();
+        if (!result.find(val))
+            result.push(val);
+    }
+
+    return result;
+}
+
+// Intersection of two Min Heaps
+MinHeap<int> intersectMinHeap(MinHeap<int> h1, MinHeap<int> h2)
+{
+    MinHeap<int> result;
+
+    MinHeap<int> temp1 = h1;
+    while (!temp1.empty())
+    {
+        int val = temp1.front();
+        temp1.pop();
+        if (h2.find(val) && !result.find(val))
+            result.push(val);
+    }
+
+    return result;
+}
+
