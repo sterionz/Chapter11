@@ -317,6 +317,7 @@ void option2()
 void option3()
 {
     vector<int> v;
+    char choice;
 
     do
     {
@@ -338,7 +339,7 @@ void option3()
         cout << "\n\t\t\t0> return";
         cout << "\n\t\t" << string(79, char(205));
 
-        char choice = toupper(inputChar("\n\t\t\tOption: ", string("abcdefghij0")));
+        choice = toupper(inputChar("\n\t\t\tOption: ", string("abcdefghij0")));
 
         switch (choice)
         {
@@ -380,7 +381,7 @@ void option3()
             }
             else
             {
-                cout << "\n\t\t\tThe heap is empty.\n";
+                cout << "\n\t\t\tThe heap is empty.";
             }
 
             break;
@@ -393,7 +394,7 @@ void option3()
             }
             else
             {
-                cout << "\n\t\t\tThe heap is empty.\n";
+                cout << "\n\t\t\tThe heap is empty.";
             }
 
             break;
@@ -407,14 +408,25 @@ void option3()
             }
             else
             {
-                cout << "\n\t\t\tThe heap is empty.\n";
+                cout << "\n\t\t\tThe heap is empty.";
             }
 
             break;
         }
         case 'G':
         {
-            sort_heap(v.begin(), v.end());
+            if (v.empty())
+            {
+                cout << "\n\t\t\tThe vector is empty";
+            }
+            else if (!is_heap(v.begin(), v.end()))
+            {
+                cout << "\n\t\t\tThe vector is not a heap yet!";
+            }
+            else
+            {
+                sort_heap(v.begin(), v.end());
+            }
 
             break;
         }
@@ -422,11 +434,15 @@ void option3()
         {
             bool result = is_heap(v.begin(), v.end());
 
-            if (result)
+            if (v.empty())
+            {
+                cout << "\n\t\t\tThe vector is empty";
+            }
+            else if (result)
             {
                 cout << "\n\t\t\tThe vector is a heap";
             }
-            else
+             else
             {
                 cout << "\n\t\t\tThe vector is not a heap";
             }
@@ -441,6 +457,9 @@ void option3()
                 cout << x << " ";
             cout << "\n";
 
+            if (v.empty())
+                cout << "\t\t\tThe heap is empty";
+
             break;
         }
         case 'J':
@@ -449,6 +468,9 @@ void option3()
             for (int x : v)
                 cout << x << " ";
             cout << "\n";
+
+            if (v.empty())
+                cout << "\t\t\tThe heap is empty";
 
             break;
         }
