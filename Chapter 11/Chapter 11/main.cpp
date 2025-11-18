@@ -337,7 +337,7 @@ void option3()
         cout << "\n\t\t\t0> return";
         cout << "\n\t\t" << string(79, char(205));
 
-        char choice = toupper(inputChar("\n\t\t\tOption: ", "abcdefghij0"));
+        char choice = toupper(inputChar("\n\t\t\tOption: ", string("abcdefghij0")));
 
         switch (choice)
         {
