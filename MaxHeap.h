@@ -103,3 +103,47 @@ ostream& operator <<(ostream& out, const MaxHeap<T>& obj)
 	return out;
 }
 #endif //
+
+// Union of two Max Heaps 
+MaxHeap<int> unionMaxHeap(MaxHeap<int> h1, MaxHeap<int> h2)
+{
+    MaxHeap<int> result;
+
+    // Add all elements from h1
+    MaxHeap<int> temp1 = h1;
+    while (!temp1.empty())
+    {
+        int val = temp1.front();
+        temp1.pop();
+        result.push(val);
+    }
+
+    // Add elements from h2 only if not already in result
+    MaxHeap<int> temp2 = h2;
+    while (!temp2.empty())
+    {
+        int val = temp2.front();
+        temp2.pop();
+        if (!result.find(val))
+            result.push(val);
+    }
+
+    return result;
+}
+
+// Intersection of two Max Heaps
+MaxHeap<int> intersectMaxHeap(MaxHeap<int> h1, MaxHeap<int> h2)
+{
+    MaxHeap<int> result;
+
+    MaxHeap<int> temp1 = h1;
+    while (!temp1.empty())
+    {
+        int val = temp1.front();
+        temp1.pop();
+        if (h2.find(val) && !result.find(val))
+            result.push(val);
+    }
+
+    return result;
+}
