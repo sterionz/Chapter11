@@ -3,6 +3,7 @@
 // Description: Chapter 11 Assignments
 
 #include <iostream>
+#include <limits>
 #include "input.h"
 #include "MaxHeap.h"
 #include "MinHeap.h"
@@ -461,5 +462,5 @@ void option3()
         cout << "\n\nPress any key to continue . . .";
         cin.get();
 
-    } while (true);
+    } while (choice != '0');
 }
