@@ -1,0 +1,21 @@
+﻿  main.cpp
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\input.h(24,14): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MinHeap.h(69,14): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MinHeap.h(67,14): message : while compiling class template member function 'unsigned int MinHeap<int>::size(void)'
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\main.cpp(79,49): message : see the first reference to 'MinHeap<int>::size' in 'option1_min'
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MinHeap.h(113,1): message : see reference to class template instantiation 'MinHeap<int>' being compiled
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MaxHeap.h(66,16): warning C4267: 'return': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MaxHeap.h(64,15): message : while compiling class template member function 'unsigned int MaxHeap<int>::size(void)'
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\main.cpp(148,49): message : see the first reference to 'MaxHeap<int>::size' in 'option1_max'
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MaxHeap.h(110,1): message : see reference to class template instantiation 'MaxHeap<int>' being compiled
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MinHeap.h(33,7): warning C4018: '<': signed/unsigned mismatch
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MinHeap.h(25,6): message : while compiling class template member function 'void MinHeap<int>::heapify_down(int)'
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MinHeap.h(97,13): message : see the first reference to 'MinHeap<int>::heapify_down' in 'MinHeap<int>::pop'
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MinHeap.h(120,18): message : see the first reference to 'MinHeap<int>::pop' in 'unionMinHeap'
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MinHeap.h(35,7): warning C4018: '<': signed/unsigned mismatch
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MaxHeap.h(32,9): warning C4018: '<': signed/unsigned mismatch
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MaxHeap.h(25,7): message : while compiling class template member function 'void MaxHeap<int>::heapify_down(int)'
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MaxHeap.h(94,15): message : see the first reference to 'MaxHeap<int>::heapify_down' in 'MaxHeap<int>::pop'
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MaxHeap.h(118,12): message : see the first reference to 'MaxHeap<int>::pop' in 'unionMaxHeap'
+C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\Chapter 11\MaxHeap.h(34,9): warning C4018: '<': signed/unsigned mismatch
+  Chapter 11.vcxproj -> C:\Users\jessy\OneDrive\Documents\CODE\Chapter 11\x64\Debug\Chapter 11.exe
