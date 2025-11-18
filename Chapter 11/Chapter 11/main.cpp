@@ -11,6 +11,7 @@ using namespace std;
 
 void option1();
 void option2();
+void option3();
 
 int main()
 {
@@ -43,7 +44,7 @@ int main()
         break;
 
         case 3:
-            // TODO: STL heap example
+            option3();
             break;
 
         case 0:
@@ -310,4 +311,155 @@ void option2()
     } while (true);
 
     return;
+}
+
+void option3()
+{
+    vector<int> v;
+
+    do
+    {
+        system("cls");
+
+        cout << "\n\t\t3> Heap in C++ STL";
+        cout << "\n\t\t" << string(79, char(205));
+        cout << "\n\t\t\tA> create a dynamic array";
+        cout << "\n\t\t\tB> push_back() an element";
+        cout << "\n\t\t\tC> make_heap()";
+        cout << "\n\t\t\tD> front()";
+        cout << "\n\t\t\tE> push_heap()";
+        cout << "\n\t\t\tF> pop_heap()";
+        cout << "\n\t\t\tG> sort_heap()";
+        cout << "\n\t\t\tH> is_heap()";
+        cout << "\n\t\t\tI> is_heap_until()";
+        cout << "\n\t\t\tJ> display";
+        cout << "\n\t\t" << string(79, char(196));
+        cout << "\n\t\t\t0> return";
+        cout << "\n\t\t" << string(79, char(205));
+
+        char choice = toupper(inputChar("\n\t\t\tOption: ", "abcdefghij0"));
+
+        switch (choice)
+        {
+        case 'A':
+        {
+            int size = inputInteger("\n\t\t\tEnter the size of the dynamic array: ");
+
+            v.clear();
+            v.reserve(size);
+
+            srand(time(0));
+            for (int i = 0; i < size; i++)
+                v.push_back(rand() % 100);
+
+            break;
+        }
+
+        case 'B':
+        {
+            int value = inputInteger("\n\t\t\tEnter an element: ", true);
+
+            v.push_back(value);
+
+            break;
+        }
+
+        case 'C':
+        {
+            make_heap(v.begin(), v.end());
+
+            break;
+        }
+
+        case 'D':
+        {
+            if (!v.empty())
+            {
+                cout << "\n\t\t\tThe maximum element of heap: " << v.front() << "\n";
+            }
+            else
+            {
+                cout << "\n\t\t\tThe heap is empty.\n";
+            }
+
+            break;
+        }
+        case 'E':
+        {
+            if (!v.empty())
+            {
+                push_heap(v.begin(), v.end());
+            }
+            else
+            {
+                cout << "\n\t\t\tThe heap is empty.\n";
+            }
+
+            break;
+        }
+        case 'F':
+        {
+            if (!v.empty())
+            {
+                pop_heap(v.begin(), v.end());
+                v.pop_back();
+            }
+            else
+            {
+                cout << "\n\t\t\tThe heap is empty.\n";
+            }
+
+            break;
+        }
+        case 'G':
+        {
+            sort_heap(v.begin(), v.end());
+
+            break;
+        }
+        case 'H':
+        {
+            bool result = is_heap(v.begin(), v.end());
+
+            if (result)
+            {
+                cout << "\n\t\t\tThe vector is a heap";
+            }
+            else
+            {
+                cout << "\n\t\t\tThe vector is not a heap";
+            }
+
+            break;
+        }
+        case 'I':
+        {
+            cout << "\n\t\t\tThe heap elements in the container are : ";
+
+            for (int x : v)
+                cout << x << " ";
+            cout << "\n";
+
+            break;
+        }
+        case 'J':
+        {
+            cout << "\n\t\t\t";
+            for (int x : v)
+                cout << x << " ";
+            cout << "\n";
+
+            break;
+        }
+        case 0:
+        {
+            return;
+        }
+
+        } 
+
+        cout << "\n\nPress any key to continue . . .";
+        cin.get();
+
+    } while (true);
 }
